@@ -1,0 +1,377 @@
+[gd_scene format=3 uid="uid://b6hotho1i1bdg"]
+
+[ext_resource type="Script" uid="uid://cyg3gv8vbxq57" path="res://main.gd" id="1_lsxjb"]
+[ext_resource type="Texture2D" uid="uid://d2ugxtkm5j45t" path="res://doidacomgasolina1.png" id="2_2mi6m"]
+[ext_resource type="Texture2D" uid="uid://de8jvgflpel23" path="res://doida1.png" id="2_vgdj6"]
+[ext_resource type="Texture2D" uid="uid://bk78xkgt8mx2c" path="res://doido1.png" id="3_6qejs"]
+[ext_resource type="Texture2D" uid="uid://dgnebko0x04sh" path="res://doida2.png" id="3_i8110"]
+[ext_resource type="Texture2D" uid="uid://2s7eupu784gg" path="res://doidacomgasolina2.png" id="3_utcj0"]
+[ext_resource type="Texture2D" uid="uid://dn0xnlf5aihwm" path="res://fogueira1.png" id="4_j04pb"]
+[ext_resource type="Texture2D" uid="uid://4430ma43svgm" path="res://jogadoramarrado1.png" id="4_sof73"]
+[ext_resource type="Texture2D" uid="uid://dpnobh56bjyha" path="res://doido2.png" id="5_x4rmg"]
+[ext_resource type="Texture2D" uid="uid://d3x3qcusn6oe2" path="res://jogadoramarrado2.png" id="7_54gig"]
+[ext_resource type="Texture2D" uid="uid://d4mbqmeqvrkwq" path="res://jogadorpegandofogo1.png" id="8_a5frv"]
+[ext_resource type="Texture2D" uid="uid://do8bx12tlhjow" path="res://jogadorpegandofogo2.png" id="9_1txom"]
+[ext_resource type="Texture2D" uid="uid://xg3xbj3033i1" path="res://fogueira2.png" id="9_x4rmg"]
+[ext_resource type="Texture2D" uid="uid://826r7l6pcfsm" path="res://jogadorqueimado1.png" id="10_2mi6m"]
+[ext_resource type="Texture2D" uid="uid://b2pnrwmgq3gh7" path="res://jogadoraliviado1.png" id="10_ttdww"]
+[ext_resource type="Texture2D" uid="uid://btbrxce4dccau" path="res://jogadoraliviado2.png" id="11_e2fur"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_i8110"]
+load_path = "res://.godot/imported/fundo.png-f9fbcbdbc60f772e394ba2c913e799d2.ctex"
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_34d6s"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_2mi6m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_utcj0")
+}],
+"loop": 1,
+"name": &"com_gasolina",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_vgdj6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_i8110")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4aue0"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_6qejs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_x4rmg")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4bstr"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_sof73")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_54gig")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_ttdww")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_e2fur")
+}],
+"loop": 1,
+"name": &"jogador_aliviado",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_a5frv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_1txom")
+}],
+"loop": 1,
+"name": &"pegando_fogo",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_2mi6m")
+}],
+"loop": 0,
+"name": &"queimado",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_sfyw5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_j04pb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_x4rmg")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Node2D" type="Node2D" unique_id=1101375278]
+
+[node name="Control(MAIN)" type="Control" parent="." unique_id=2066736024]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1153.0
+offset_bottom = 649.0
+script = ExtResource("1_lsxjb")
+
+[node name="Node2D" type="Node2D" parent="Control(MAIN)" unique_id=618769965]
+
+[node name="Fundo" type="Sprite2D" parent="Control(MAIN)/Node2D" unique_id=2114762193]
+position = Vector2(579, 323.00003)
+scale = Vector2(1.0052083, 0.99691355)
+texture = SubResource("CompressedTexture2D_i8110")
+
+[node name="psicopata1" type="AnimatedSprite2D" parent="Control(MAIN)/Node2D" unique_id=2092476271]
+position = Vector2(415.00003, 465.99997)
+scale = Vector2(1.5694989, 1.7451173)
+sprite_frames = SubResource("SpriteFrames_34d6s")
+animation = &"com_gasolina"
+autoplay = "default"
+frame_progress = 0.7604353
+speed_scale = 0.5
+
+[node name="psicopata2" type="AnimatedSprite2D" parent="Control(MAIN)/Node2D" unique_id=1634290200]
+position = Vector2(727, 460.00003)
+scale = Vector2(1.9186198, 1.8782555)
+sprite_frames = SubResource("SpriteFrames_4aue0")
+autoplay = "default"
+frame_progress = 0.29724252
+speed_scale = 0.5
+
+[node name="jogador amarrado" type="AnimatedSprite2D" parent="Control(MAIN)/Node2D" unique_id=534728409]
+position = Vector2(575.00006, 426)
+scale = Vector2(2.0078115, 2.3382812)
+sprite_frames = SubResource("SpriteFrames_4bstr")
+animation = &"jogador_aliviado"
+autoplay = "default"
+frame_progress = 0.59784347
+speed_scale = 0.5
+
+[node name="fogueiraplayer" type="AnimatedSprite2D" parent="Control(MAIN)/Node2D" unique_id=711432835]
+position = Vector2(578, 514.00006)
+scale = Vector2(2.5078113, 1.8984373)
+sprite_frames = SubResource("SpriteFrames_sfyw5")
+speed_scale = 0.0
+
+[node name="(UI) CanvasLayer" type="CanvasLayer" parent="Control(MAIN)" unique_id=336033617]
+
+[node name="MarginContainer" type="MarginContainer" parent="Control(MAIN)/(UI) CanvasLayer" unique_id=1453229304]
+offset_left = 27.0
+offset_top = 22.0
+offset_right = 380.0
+offset_bottom = 621.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control(MAIN)/(UI) CanvasLayer/MarginContainer" unique_id=1868613889]
+layout_mode = 2
+
+[node name="Titulo" type="Label" parent="Control(MAIN)/(UI) CanvasLayer/MarginContainer/VBoxContainer" unique_id=778888106]
+layout_mode = 2
+theme_override_font_sizes/font_size = 26
+text = "Noite Cabulosa"
+
+[node name="MensagemResultado" type="Label" parent="Control(MAIN)/(UI) CanvasLayer/MarginContainer/VBoxContainer" unique_id=1788864367]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "Será que tu vive eim"
+
+[node name="GridPalavras" type="GridContainer" parent="Control(MAIN)/(UI) CanvasLayer/MarginContainer/VBoxContainer" unique_id=858505194]
+layout_mode = 2
+columns = 5
+
+[node name="Letra1" type="Label" parent="Control(MAIN)/(UI) CanvasLayer/MarginContainer/VBoxContainer/GridPalavras" unique_id=651776190]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Letra2" type="Label" parent="Control(MAIN)/(UI) CanvasLayer/MarginContainer/VBoxContainer/GridPalavras" unique_id=2078256407]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Letra3" type="Label" parent="Control(MAIN)/(UI) CanvasLayer/MarginContainer/VBoxContainer/GridPalavras" unique_id=1355944615]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Letra4" type="Label" parent="Control(MAIN)/(UI) CanvasLayer/MarginContainer/VBoxContainer/GridPalavras" unique_id=101173575]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Letra5" type="Label" parent="Control(MAIN)/(UI) CanvasLayer/MarginContainer/VBoxContainer/GridPalavras" unique_id=1060791547]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Letra6" type="Label" parent="Control(MAIN)/(UI) CanvasLayer/MarginContainer/VBoxContainer/GridPalavras" unique_id=1499376123]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Letra7" type="Label" parent="Control(MAIN)/(UI) CanvasLayer/MarginContainer/VBoxContainer/GridPalavras" unique_id=1762969623]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Letra8" type="Label" parent="Control(MAIN)/(UI) CanvasLayer/MarginContainer/VBoxContainer/GridPalavras" unique_id=886352593]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Letra9" type="Label" parent="Control(MAIN)/(UI) CanvasLayer/MarginContainer/VBoxContainer/GridPalavras" unique_id=66383743]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Letra10" type="Label" parent="Control(MAIN)/(UI) CanvasLayer/MarginContainer/VBoxContainer/GridPalavras" unique_id=359738292]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Letra11" type="Label" parent="Control(MAIN)/(UI) CanvasLayer/MarginContainer/VBoxContainer/GridPalavras" unique_id=1863803231]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Letra12" type="Label" parent="Control(MAIN)/(UI) CanvasLayer/MarginContainer/VBoxContainer/GridPalavras" unique_id=621629541]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Letra13" type="Label" parent="Control(MAIN)/(UI) CanvasLayer/MarginContainer/VBoxContainer/GridPalavras" unique_id=2037270226]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Letra14" type="Label" parent="Control(MAIN)/(UI) CanvasLayer/MarginContainer/VBoxContainer/GridPalavras" unique_id=1683759394]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Letra15" type="Label" parent="Control(MAIN)/(UI) CanvasLayer/MarginContainer/VBoxContainer/GridPalavras" unique_id=876505382]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Letra16" type="Label" parent="Control(MAIN)/(UI) CanvasLayer/MarginContainer/VBoxContainer/GridPalavras" unique_id=1639074821]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Letra17" type="Label" parent="Control(MAIN)/(UI) CanvasLayer/MarginContainer/VBoxContainer/GridPalavras" unique_id=1555903899]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Letra18" type="Label" parent="Control(MAIN)/(UI) CanvasLayer/MarginContainer/VBoxContainer/GridPalavras" unique_id=2087041330]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Letra19" type="Label" parent="Control(MAIN)/(UI) CanvasLayer/MarginContainer/VBoxContainer/GridPalavras" unique_id=1695189395]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Letra20" type="Label" parent="Control(MAIN)/(UI) CanvasLayer/MarginContainer/VBoxContainer/GridPalavras" unique_id=1172785931]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Letra21" type="Label" parent="Control(MAIN)/(UI) CanvasLayer/MarginContainer/VBoxContainer/GridPalavras" unique_id=1467596481]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Letra22" type="Label" parent="Control(MAIN)/(UI) CanvasLayer/MarginContainer/VBoxContainer/GridPalavras" unique_id=1963676183]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Letra23" type="Label" parent="Control(MAIN)/(UI) CanvasLayer/MarginContainer/VBoxContainer/GridPalavras" unique_id=494465448]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Letra24" type="Label" parent="Control(MAIN)/(UI) CanvasLayer/MarginContainer/VBoxContainer/GridPalavras" unique_id=485563703]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Letra25" type="Label" parent="Control(MAIN)/(UI) CanvasLayer/MarginContainer/VBoxContainer/GridPalavras" unique_id=1407833554]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Letra26" type="Label" parent="Control(MAIN)/(UI) CanvasLayer/MarginContainer/VBoxContainer/GridPalavras" unique_id=1991255794]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Letra27" type="Label" parent="Control(MAIN)/(UI) CanvasLayer/MarginContainer/VBoxContainer/GridPalavras" unique_id=2012345371]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Letra28" type="Label" parent="Control(MAIN)/(UI) CanvasLayer/MarginContainer/VBoxContainer/GridPalavras" unique_id=1989495089]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Letra29" type="Label" parent="Control(MAIN)/(UI) CanvasLayer/MarginContainer/VBoxContainer/GridPalavras" unique_id=124054444]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Letra30" type="Label" parent="Control(MAIN)/(UI) CanvasLayer/MarginContainer/VBoxContainer/GridPalavras" unique_id=348259502]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="LineEdit" type="LineEdit" parent="Control(MAIN)/(UI) CanvasLayer/MarginContainer/VBoxContainer" unique_id=1451175325]
+layout_mode = 2
+placeholder_text = "Digite a palavra aqui..."
+alignment = 1
+max_length = 5
